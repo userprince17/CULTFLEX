@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Processing Payment</title>
+<style>
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.loader {
+  border: 5px solid #222;
+  border-top: 5px solid #ff0066;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+.small-text {
+  color: #aaa;
+  font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="loader"></div>
+<h2>Processing Payment...</h2>
+<p class="small-text">Please do not refresh or close this window.</p>
+
+<script>
+setTimeout(function(){
+   window.location.href = "success.html";
+}, 5000); // redirects after 5 seconds
+</script>
+
+</body>
+</html>
