@@ -447,6 +447,121 @@ body { ... }
   .about-right {
     margin-top: 30px;
   }
+  .about-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 80px 5%;
+  flex-wrap: wrap;
+}
+
+.about-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-left h2 {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.about-left .highlight {
+  color: var(--pink);
+}
+
+.music-btn {
+  margin-top: 25px;
+  padding: 12px 30px;
+  border: 1px solid var(--pink);
+  background: transparent;
+  color: var(--pink);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.music-btn:hover {
+  background: var(--pink);
+  color: black;
+}
+
+.about-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.team-title {
+  margin-bottom: 30px;
+  color: var(--pink);
+  letter-spacing: 3px;
+}
+
+.team-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.team-card {
+  width: 140px;
+  text-align: center;
+}
+
+.team-card img {
+  width: 140px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid #333;
+  transition: 0.3s;
+}
+
+.team-card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px var(--pink);
+}
+
+.team-card a {
+  display: block;
+  margin-top: 10px;
+  color: var(--pink);
+  font-size: 0.75rem;
+  text-decoration: none;
+}
+
+.about-stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 5%;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  background: var(--dark);
+  padding: 30px;
+  text-align: center;
+  border: 1px solid #222;
+  border-radius: 6px;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--pink);
+}
+
+.stat-box span {
+  display: block;
+  font-size: 0.7rem;
+  font-family: var(--font-tech);
+  color: var(--light-grey);
+  margin-top: 10px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .about-container {
+    flex-direction: column;
+  }
+}
 }
 </style>
 <script src="https://unpkg.com/lucide@latest"></script>
@@ -744,24 +859,78 @@ body { ... }
 </div>
 
 <!-- ABOUT -->
-<audio id="aboutMusic"  loop>
+<!-- ABOUT PAGE -->
+<audio id="aboutMusic" loop>
   <source src="music/about-music.mp3" type="audio/mpeg">
 </audio>
+
 <div id="about" class="page">
-  <div class="about-hero">
-    <div class="about-content">
+
+  <div class="about-container">
+
+    <!-- LEFT SIDE -->
+    <div class="about-left">
       <h2>ABOUT <span>CULTFLEX</span></h2>
-      <p>CULTFLEX is more than a clothing brand — it's a canvas for self-expression. Born from the idea that fashion should bend to you, not the other way around, we create garments that flex with your identity, your vibe, your rules.</p>
-      <p>Every stitch, every print, every silhouette is crafted with obsessive attention to detail — from bio-washed premium fabrics to razor-sharp graphic cuts. We don't do generic. We do YOU.</p>
-      <p>Whether you're picking from our curated drops or building your custom fit from scratch, CULTFLEX ensures one thing: <span style="color:var(--pink)">you look like no one else.</span></p>
+
+      <p>
+        CULTFLEX is more than a clothing brand — it's a canvas for self-expression.
+        We create garments that flex with your identity, your vibe, your rules.
+      </p>
+
+      <p>
+        Every stitch, every print, every silhouette is crafted with obsessive attention
+        to detail — from premium fabrics to razor-sharp graphic cuts.
+      </p>
+
+      <p>
+        Whether you're picking curated drops or building your custom fit,
+        <span class="highlight">you look like no one else.</span>
+      </p>
+
+      <!-- MUSIC BUTTON -->
+      <button class="music-btn" onclick="toggleMusic()">
+        ▶ PLAY MUSIC
+      </button>
     </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="about-right">
+
+      <h3 class="team-title">TEAM MEMBERS</h3>
+
+      <div class="team-container">
+
+        <div class="team-card">
+          <img src="images/model1.jpg">
+          <a href="https://instagram.com/prince.____17" target="_blank">
+            @prince.____17
+          </a>
+        </div>
+
+        <div class="team-card">
+          <img src="images/model2.jpg">
+          <a href="#" target="_blank">@member2</a>
+        </div>
+
+        <div class="team-card">
+          <img src="images/model3.jpg">
+          <a href="#" target="_blank">@member3</a>
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
-  <div style="padding:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;">
-    <div style="text-align:center;padding:30px;background:var(--dark);border:1px solid #222;border-radius:4px;"><div style="font-family:var(--font-display);font-size:3rem;color:var(--pink);">500+</div><div style="font-family:var(--font-tech);font-size:0.7rem;letter-spacing:3px;color:var(--light-grey);">HAPPY CUSTOMERS</div></div>
-    <div style="text-align:center;padding:30px;background:var(--dark);border:1px solid #222;border-radius:4px;"><div style="font-family:var(--font-display);font-size:3rem;color:var(--pink);">100%</div><div style="font-family:var(--font-tech);font-size:0.7rem;letter-spacing:3px;color:var(--light-grey);">AUTHENTIC FABRIC</div></div>
-    <div style="text-align:center;padding:30px;background:var(--dark);border:1px solid #222;border-radius:4px;"><div style="font-family:var(--font-display);font-size:3rem;color:var(--pink);">7 DAY</div><div style="font-family:var(--font-tech);font-size:0.7rem;letter-spacing:3px;color:var(--light-grey);">EASY RETURNS</div></div>
-    <div style="text-align:center;padding:30px;background:var(--dark);border:1px solid #222;border-radius:4px;"><div style="font-family:var(--font-display);font-size:3rem;color:var(--pink);">∞</div><div style="font-family:var(--font-tech);font-size:0.7rem;letter-spacing:3px;color:var(--light-grey);">CUSTOM COMBOS</div></div>
+
+  <!-- STATS BELOW -->
+  <div class="about-stats">
+    <div class="stat-box">500+<span>HAPPY CUSTOMERS</span></div>
+    <div class="stat-box">100%<span>AUTHENTIC FABRIC</span></div>
+    <div class="stat-box">7 DAY<span>EASY RETURNS</span></div>
+    <div class="stat-box">∞<span>CUSTOM COMBOS</span></div>
   </div>
+
 </div>
 
 <!-- CONTACT -->
@@ -829,12 +998,6 @@ const products = [
 
 { id:29,  name:'STREET-WEAR SWAG ',    price:349,  category:'graphic', image:'images/g8.jpg', type:'Oversized Drop-Shoulder', material:'Premium Pima Cotton',    colour:'YELLOW',     fit:'perfect fit ', neck:'Round Neck',  pattern:'printed',     gender:'Unisex', sleeve:'Short Sleeve' },
 { id:30,  name:'THE HEISENBERG PRINT',    price:349,  category:'graphic', image:'images/g9.jpg', type:'Oversized Drop-Shoulder', material:'Premium Pima Cotton',    colour:'Off White',     fit:'perfect fit ', neck:'Round Neck',  pattern:'printed',     gender:'Unisex', sleeve:'Short Sleeve' },
-
-
-
-
-
-
 
 ];
 
@@ -1046,6 +1209,18 @@ function startPayment() {
       music.play();
     }
   }, { once: true });
+  function toggleMusic() {
+  const music = document.getElementById("aboutMusic");
+  const btn = document.querySelector(".music-btn");
+
+  if (music.paused) {
+    music.play();
+    btn.innerText = "⏸ PAUSE MUSIC";
+  } else {
+    music.pause();
+    btn.innerText = "▶ PLAY MUSIC";
+  }
+}
 
   // Initialize Lucide icons
   lucide.createIcons();
