@@ -280,12 +280,81 @@ nav {
 
 /* ABOUT */
 #about { padding-top:60px; }
-.about-hero { min-height:50vh; display:flex; align-items:center; padding:60px 40px; background:linear-gradient(135deg,var(--dark) 0%,var(--grey) 50%,var(--dark) 100%); border-bottom:1px solid var(--pink); }
-.about-content { max-width:700px; }
-.about-content h2 { font-family:var(--font-display); font-size:clamp(2.5rem,5vw,4rem); letter-spacing:4px; margin-bottom:20px; }
-.about-content h2 span { color:var(--pink); }
-.about-content p { color:var(--light-grey); line-height:1.8; font-size:1rem; letter-spacing:0.5px; margin-bottom:12px; }
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 25px;
+}
 
+.team-card {
+  text-align: center;
+}
+
+.team-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: 0.4s ease;
+  border: 1px solid #222;
+}
+
+.team-card img:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 0.about-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  padding: 60px 5%;
+}
+
+.stat-box {
+  background: #111;
+  border: 1px solid #222;
+  padding: 30px;
+  text-align: center;
+  border-radius: 12px;
+  font-size: 2rem;
+  color: #ff0080;
+  font-weight: bold;
+}
+
+.stat-box span {
+  display: block;
+  font-size: 0.7rem;
+  color: #aaa;
+  margin-top: 10px;
+  letter-spacing: 2px;
+}
+  }
+.team-card a {
+  display: block;
+  margin-top: 12px;
+  color: #ff0080;
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+  .music-bar {
+  margin-top: 30px;
+  background: #111;
+  border-radius: 40px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 300px;
+  border: 1px solid #222;
+}
+
+.music-bar button {
+  background: #ff0080;
+  border: none;
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+}
 /* CATEGORIES */
 #categories { padding-top:60px; }
 .categories-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:20px; padding:40px; }
@@ -899,25 +968,37 @@ body { ... }
       <h3 class="team-title">TEAM MEMBERS</h3>
 
       <div class="team-container">
+  <!-- MEMBER 1 -->
+  <div class="team-card">
+    <img src="images/model1.jpg">
+    <a href="https://instagram.com/prince.____17" target="_blank">@prince.___17</a>
+  </div>
 
-        <div class="team-card">
-          <img src="images/model1.jpg">
-          <a href="https://instagram.com/prince.____17" target="_blank">
-            @prince.____17
-          </a>
-        </div>
+  <!-- MEMBER 2 -->
+  <div class="team-card">
+    <img src="images/model2.jpg">
+    <a href="#" target="_blank">@member2</a>
+  </div>
 
-        <div class="team-card">
-          <img src="images/model2.jpg">
-          <a href="#" target="_blank">@member2</a>
-        </div>
+  <!-- MEMBER 3 -->
+  <div class="team-card">
+    <img src="images/model3.jpg">
+    <a href="#" target="_blank">@member3</a>
+  </div>
 
-        <div class="team-card">
-          <img src="images/model3.jpg">
-          <a href="#" target="_blank">@member3</a>
-        </div>
+  <!-- MEMBER 4 -->
+  <div class="team-card">
+    <img src="images/model4.jpg">
+    <a href="#" target="_blank">@member4</a>
+  </div>
 
-      </div>
+  <!-- MEMBER 5 -->
+  <div class="team-card">
+    <img src="images/model5.jpg">
+    <a href="#" target="_blank">@member5</a>
+  </div>
+
+</div>
 
     </div>
 
@@ -925,11 +1006,28 @@ body { ... }
 
   <!-- STATS BELOW -->
   <div class="about-stats">
-    <div class="stat-box">500+<span>HAPPY CUSTOMERS</span></div>
-    <div class="stat-box">100%<span>AUTHENTIC FABRIC</span></div>
-    <div class="stat-box">7 DAY<span>EASY RETURNS</span></div>
-    <div class="stat-box">∞<span>CUSTOM COMBOS</span></div>
+
+  <div class="stat-box">
+    500+
+    <span>HAPPY CUSTOMERS</span>
   </div>
+
+  <div class="stat-box">
+    100%
+    <span>AUTHENTIC FABRIC</span>
+  </div>
+
+  <div class="stat-box">
+    7 DAY
+    <span>EASY RETURNS</span>
+  </div>
+
+  <div class="stat-box">
+    ∞
+    <span>CUSTOM COMBOS</span>
+  </div>
+
+</div>
 
 </div>
 
@@ -1211,14 +1309,14 @@ function startPayment() {
   }, { once: true });
   function toggleMusic() {
   const music = document.getElementById("aboutMusic");
-  const btn = document.querySelector(".music-btn");
+  const btn = document.getElementById("musicBtn");
 
   if (music.paused) {
     music.play();
-    btn.innerText = "⏸ PAUSE MUSIC";
+    btn.innerHTML = "⏸";
   } else {
     music.pause();
-    btn.innerText = "▶ PLAY MUSIC";
+    btn.innerHTML = "▶";
   }
 }
 
