@@ -952,12 +952,7 @@ body { ... }
         <span class="highlight">you look like no one else.</span>
       </p>
 
-      <!-- MUSIC BUTTON -->
-      <button class="music-btn" onclick="toggleMusic()">
-        ▶ PLAY MUSIC
-      </button>
-    </div>
-
+     
     <!-- RIGHT SIDE -->
     <div class="about-right">
 
@@ -1321,21 +1316,13 @@ function startPayment() {
  
 }
 
-}
-  function toggleMusic() {
+document.addEventListener("click", function () {
   const music = document.getElementById("aboutMusic");
-  const btn = document.querySelector(".music-btn");
-
-  if (music.paused) {
-    music.play().then(() => {
-      btn.innerHTML = "⏸ PAUSE MUSIC";
-    }).catch(error => {
-      console.log("Playback blocked:", error);
-    });
-  } else {
-    music.pause();
-    btn.innerHTML = "▶ PLAY MUSIC";
+  if (music && music.paused) {
+    music.volume = 0.6;
+    music.play().catch(() => {});
   }
+}, { once: true });
 }
   lucide.createIcons();
   document.addEventListener("DOMContentLoaded", function() {
