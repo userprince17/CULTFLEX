@@ -1024,26 +1024,69 @@ body { ... }
 
 <!-- CONTACT -->
 <div id="contact" class="page">
-  <div class="page-header"><h2>CONTACT <span>& HELP</span></h2><p>WE'RE HERE FOR YOU — ALWAYS</p></div>
+  <div class="page-header">
+    <h2>CONTACT <span>& HELP</span></h2>
+    <p>WE'RE HERE FOR YOU — ALWAYS</p>
+  </div>
+
   <div class="contact-layout">
     <div class="contact-card">
-      <a class="contact-item" href="https://instagram.com/" target="_blank">
-        <div class="contact-icon"><i class="fa-brands fa-instagram"></i> </div><div><div class="contact-label">FOLLOW OUR INSTAGRAM</div><div class="contact-value">_cultflex.store_</div></div>
+
+      <!-- Instagram -->
+      <a class="contact-item" href="https://instagram.com/_cultflex.store_" target="_blank">
+        <div class="contact-icon">
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+        <div>
+          <div class="contact-label">FOLLOW OUR INSTAGRAM</div>
+          <div class="contact-value">_cultflex.store_</div>
+        </div>
       </a>
+
+      <!-- WhatsApp -->
       <a class="contact-item" href="https://wa.me/9150108127" target="_blank">
-        <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i> </div><div><div class="contact-label">CHAT ON WHATSAPP</div><div class="contact-value">+91 9150108127</div></div>
+        <div class="contact-icon">
+          <i class="fa-brands fa-whatsapp"></i>
+        </div>
+        <div>
+          <div class="contact-label">CHAT ON WHATSAPP</div>
+          <div class="contact-value">+91 9150108127</div>
+        </div>
       </a>
-      <a class="contact-item" href="mailto:support@cultflex.in">
-        <div class="contact-icon">email</div><div><div class="contact-label"></div><div class="contact-value">kprince2608@gmail.com</div></div>
+
+      <!-- Email -->
+      <a class="contact-item" href="mailto:kprince2608@gmail.com">
+        <div class="contact-icon">
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <div>
+          <div class="contact-label">EMAIL US</div>
+          <div class="contact-value">kprince2608@gmail.com</div>
+        </div>
       </a>
+
     </div>
+
+    <!-- Quick Message -->
     <div style="margin-top:20px;padding:20px;background:var(--dark);border:1px solid #222;border-radius:4px;">
-      <div style="font-family:var(--font-tech);font-size:0.7rem;letter-spacing:2px;color:var(--pink);margin-bottom:12px;">QUICK MESSAGE</div>
-      <input type="text" placeholder="Your Name" style="width:100%;background:var(--grey);border:1px solid #333;color:var(--white);font-family:var(--font-body);padding:10px 12px;border-radius:2px;margin-bottom:10px;outline:none;font-size:0.9rem;">
-      <input type="text" placeholder="Your WhatsApp / Email" style="width:100%;background:var(--grey);border:1px solid #333;color:var(--white);font-family:var(--font-body);padding:10px 12px;border-radius:2px;margin-bottom:10px;outline:none;font-size:0.9rem;">
-      <textarea placeholder="Your message..." rows="4" style="width:100%;background:var(--grey);border:1px solid #333;color:var(--white);font-family:var(--font-body);padding:10px 12px;border-radius:2px;margin-bottom:10px;outline:none;font-size:0.9rem;resize:vertical;"></textarea>
-      <button class="btn-cart" onclick="showToast('Message sent! We\'ll reply within 24 hours.')">SEND MESSAGE</button>
+      <div style="font-family:var(--font-tech);font-size:0.7rem;letter-spacing:2px;color:var(--pink);margin-bottom:12px;">
+        QUICK MESSAGE
+      </div>
+
+      <input type="text" placeholder="Your Name"
+        style="width:100%;background:var(--grey);border:1px solid #333;color:var(--white);padding:10px 12px;margin-bottom:10px;">
+
+      <input type="text" placeholder="Your WhatsApp / Email"
+        style="width:100%;background:var(--grey);border:1px solid #333;color:var(--white);padding:10px 12px;margin-bottom:10px;">
+
+      <textarea placeholder="Your message..." rows="4"
+        style="width:100%;background:var(--grey);border:1px solid #333;color:var(--white);padding:10px 12px;margin-bottom:10px;"></textarea>
+
+      <button class="btn-cart" onclick="showToast('Message sent! We will reply soon.')">
+        SEND MESSAGE
+      </button>
     </div>
+
   </div>
 </div>
 
