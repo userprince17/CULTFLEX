@@ -28,7 +28,7 @@ The project was built to demonstrate practical skills in front-end web developme
 
 ---
 
-## SEO & Digital Marketing Setup
+## SEO & Digital Marketing Setup (done as of 27/4/2026)
 
 This project includes a complete on-page SEO implementation:
 
@@ -44,7 +44,7 @@ This project includes a complete on-page SEO implementation:
 | Google Analytics 4 | Connected — tracking organic visits |
 | Google Search Console | Sitemap submitted, pages indexed |
 
-**Lighthouse Scores** *(after SEO upgrades)*
+**Lighthouse Scores** *(Before SEO upgrades)*
 
 | Metric | Score |
 |---|---|
