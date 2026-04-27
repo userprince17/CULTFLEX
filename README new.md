@@ -2,13 +2,9 @@
 
 > A fashion e-commerce front-end project built with HTML, CSS & JavaScript — hosted on GitHub Pages.
 
-![CultFlex Banner](images/model3.jpg)
-
----
-
 ## About the Project
 
-CultFlex is a mock fashion e-commerce website designed and developed as a personal portfolio project. It simulates a real Indian streetwear brand — featuring product listings, a functional cart, category filtering, and a complete checkout flow — all built without any frameworks or backend.
+CultFlex is a mock fashion e-commerce website designed and developed as a personal portfolio project. It simulates a real streetwear brand — featuring product listings, a functional cart, category filtering, and a complete checkout flow — all built without any frameworks or backend.
 
 The project was built to demonstrate practical skills in front-end web development, UI/UX design, and digital marketing setup (SEO, analytics).
 
